@@ -37,6 +37,7 @@ describe('ApiBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "root",
           "input": "apis",
@@ -86,6 +87,7 @@ describe('ApiBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "root",
           "input": "apis",

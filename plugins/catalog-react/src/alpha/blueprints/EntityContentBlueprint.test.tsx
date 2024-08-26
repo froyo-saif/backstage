@@ -39,6 +39,7 @@ describe('EntityContentBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "page:catalog/entity",
           "input": "contents",

@@ -37,6 +37,7 @@ describe('EntityCardBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "entity-content:catalog/overview",
           "input": "cards",

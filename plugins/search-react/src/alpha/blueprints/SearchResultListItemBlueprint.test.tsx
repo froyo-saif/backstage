@@ -37,6 +37,7 @@ describe('SearchResultListItemBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "page:search",
           "input": "items",

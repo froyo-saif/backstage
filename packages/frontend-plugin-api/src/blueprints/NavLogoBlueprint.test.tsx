@@ -30,6 +30,7 @@ describe('NavLogoBlueprint', () => {
     expect(extension).toMatchInlineSnapshot(`
       {
         "$$type": "@backstage/ExtensionDefinition",
+        "T": null,
         "attachTo": {
           "id": "app/nav",
           "input": "logos",
