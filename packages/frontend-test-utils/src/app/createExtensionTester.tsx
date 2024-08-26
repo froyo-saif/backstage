@@ -168,19 +168,20 @@ export class ExtensionTester<UOutput extends AnyExtensionDataRef> {
       );
     }
 
-    let resolvedExtension;
-    try {
-      resolvedExtension = resolveExtensionDefinition(extension);
-    } catch {
-      resolvedExtension = resolveExtensionDefinition(extension, {
-        namespace: 'test',
-      });
-    }
+    const { name, namespace } = toInternalExtensionDefinition(extension);
+
+    const definition = {
+      ...extension,
+      // setting name "test" as fallback
+      name: !namespace && !name ? 'test' : name,
+    };
+
+    const resolvedExtension = resolveExtensionDefinition(definition);
 
     this.#extensions.push({
       id: resolvedExtension.id,
       extension: resolvedExtension,
-      definition: extension,
+      definition,
       config: options?.config as JsonValue,
     });
 
